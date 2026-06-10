@@ -1,7 +1,34 @@
-header {
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   BODY
+========================= */
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: #f5faf7;
+
+    color: #333;
+
+    line-height: 1.6;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
     display: flex;
+
     justify-content: center;
     align-items: center;
+
     gap: 50px;
 
     padding: 20px 5%;
@@ -9,88 +36,62 @@ header {
     background-color: #c4e5da;
 
     position: sticky;
+
     top: 0;
+
     z-index: 1000;
+
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
-.logo {
+.logo{
     display: flex;
+
     align-items: center;
 }
 
-.logo-img {
+.logo-img{
     height: 120px;
+
     width: auto;
 }
 
-.nav-links {
+.nav-links{
     display: flex;
+
     list-style: none;
+
     gap: 20px;
 }
 
-.nav-links li a {
+.nav-links li a{
     text-decoration: none;
+
     color: #36702b;
+
     font-weight: 600;
 
-    padding: 8px 12px;
+    padding: 10px 14px;
 
-    border-radius: 6px;
+    border-radius: 8px;
 
     transition: 0.3s;
 }
 
-.nav-links a:hover {
+.nav-links li a:hover{
     background-color: #66bb6a;
-    color: white;
-}
-
-.search-container{
-    display: flex;
-    align-items: center;
-}
-
-.search-container input{
-    padding: 11px 15px;
-
-    border: none;
-
-    border-radius: 25px 0 0 25px;
-
-    outline: none;
-
-    width: 210px;
-
-    background: white;
-
-    font-size: 15px;
-}
-
-.search-container button{
-    padding: 11px 16px;
-
-    border: none;
-
-    background-color: #4CAF50;
 
     color: white;
-
-    border-radius: 0 25px 25px 0;
-
-    cursor: pointer;
-
-    transition: 0.3s;
 }
 
-.search-container button:hover{
-    background-color: #43a047;
-}
+/* =========================
+   HERO
+========================= */
 
 .hero-doacoes{
     background: linear-gradient(to right, #c4e5da, #edf8f2);
 
-    padding: 90px 20px 80px;
+    padding: 100px 20px 90px;
 
     text-align: center;
 }
@@ -117,7 +118,37 @@ header {
     line-height: 1.9;
 
     font-size: 17px;
+
+    margin-bottom: 30px;
 }
+
+.btn-hero{
+    display: inline-block;
+
+    background-color: #4CAF50;
+
+    color: white;
+
+    padding: 14px 30px;
+
+    border-radius: 12px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.btn-hero:hover{
+    background-color: #388e3c;
+
+    transform: translateY(-3px);
+}
+
+/* =========================
+   FILTROS
+========================= */
 
 .filtros-doacao{
     display: flex;
@@ -168,6 +199,130 @@ header {
     background-color: #43a047;
 }
 
+/* =========================
+   FORMULÁRIO
+========================= */
+
+.form-doacao{
+    padding: 40px 20px 20px;
+}
+
+.form-container{
+    max-width: 900px;
+
+    margin: auto;
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 22px;
+
+    box-shadow: 0 8px 22px rgba(0,0,0,0.05);
+}
+
+.form-container h2{
+    color: #1b3a2f;
+
+    font-size: 2.2rem;
+
+    margin-bottom: 15px;
+}
+
+.form-container p{
+    color: #666;
+
+    margin-bottom: 35px;
+
+    line-height: 1.8;
+}
+
+.form-grid{
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.input-group{
+    display: flex;
+
+    flex-direction: column;
+
+    margin-bottom: 20px;
+}
+
+.input-group label{
+    margin-bottom: 10px;
+
+    color: #2e7d32;
+
+    font-weight: bold;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea{
+    padding: 14px;
+
+    border-radius: 12px;
+
+    border: 1px solid #d9d9d9;
+
+    outline: none;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+.input-group textarea{
+    min-height: 130px;
+
+    resize: vertical;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus{
+    border-color: #4CAF50;
+
+    box-shadow: 0 0 8px rgba(76,175,80,0.2);
+}
+
+.btn-doar{
+    width: 100%;
+
+    padding: 16px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    background-color: #4CAF50;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.btn-doar:hover{
+    background-color: #388e3c;
+
+    transform: translateY(-2px);
+}
+
+/* =========================
+   CARDS
+========================= */
+
 .container-section{
     max-width: 1200px;
 
@@ -192,6 +347,7 @@ header {
     content: "";
 
     width: 95px;
+
     height: 5px;
 
     background-color: #4CAF50;
@@ -235,11 +391,13 @@ header {
 .card-doacao img{
     width: 100%;
 
-    height: 200px; 
+    height: 220px;
 
-    object-fit: contain; 
+    object-fit: contain;
 
-    display: block;
+    background-color: #fff;
+
+    padding: 15px;
 }
 
 .card-content{
@@ -308,36 +466,9 @@ header {
     background-color: #388e3c;
 }
 
-@media (max-width: 992px){
-
-    .card-grid{
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 768px){
-
-    .hero-texto h1{
-        font-size: 2.3rem;
-    }
-
-    .card-grid{
-        grid-template-columns: 1fr;
-    }
-
-    .filtros-doacao{
-        flex-direction: column;
-
-        align-items: center;
-    }
-
-    .filtros-doacao select,
-    .filtros-doacao button{
-        width: 100%;
-
-        max-width: 320px;
-    }
-}
+/* =========================
+   FOOTER
+========================= */
 
 .rodape-completo{
     background-color: #1a1a1a;
@@ -348,7 +479,7 @@ header {
 
     width: 100%;
 
-    margin-top: 50px;
+    margin-top: 80px;
 }
 
 .footer-container{
@@ -367,7 +498,6 @@ header {
     width: 100%;
 }
 
-.footer-col h3,
 .footer-col h4{
     color: #4CAF50;
 
@@ -444,59 +574,19 @@ header {
     border-top: 1px solid #738d76;
 }
 
-.titulo-pagina{
-    text-align: center;
+/* =========================
+   RESPONSIVO
+========================= */
 
-    padding: 40px 20px;
+@media (max-width: 992px){
 
-    background-color: #ffffff;
-}
+    .card-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
 
-.busca{
-    display: flex;
-
-    justify-content: center;
-
-    gap: 10px;
-
-    padding: 30px 20px;
-
-    flex-wrap: wrap;
-}
-
-.busca input,
-.busca select{
-    padding: 10px;
-
-    border-radius: 6px;
-
-    border: 1px solid #ccc;
-}
-
-.busca button{
-    background-color: #4CAF50;
-
-    color: white;
-
-    border: none;
-
-    padding: 10px 20px;
-
-    border-radius: 6px;
-
-    cursor: pointer;
-}
-
-.mapa-container{
-    padding: 20px;
-}
-
-#mapa{
-    height: 500px;
-
-    border-radius: 10px;
-
-    border: 1px solid #ddd;
+    .form-grid{
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 768px){
@@ -513,6 +603,27 @@ header {
         align-items: center;
     }
 
+    .hero-texto h1{
+        font-size: 2.3rem;
+    }
+
+    .card-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .filtros-doacao{
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .filtros-doacao select,
+    .filtros-doacao button{
+        width: 100%;
+
+        max-width: 320px;
+    }
+
     .footer-container{
         grid-template-columns: 1fr;
 
@@ -521,36 +632,14 @@ header {
 
     .newsletter-form{
         flex-direction: column;
-
-        align-items: center;
     }
 
     .newsletter-form input,
     .newsletter-form button{
-        max-width: 300px;
-
         width: 100%;
     }
 
-    #mapa{
-        height: 400px;
-    }
-
-    .busca{
-        flex-direction: column;
-
-        align-items: center;
-    }
-
-    .busca input,
-    .busca select,
-    .busca button{
-        width: 100%;
-
-        max-width: 300px;
-    }
-
-    .card-grid{
-        grid-template-columns: 1fr;
+    .form-container{
+        padding: 30px 20px;
     }
 }

@@ -8,42 +8,32 @@
     <link rel="stylesheet"
         href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
-
 <body>
-
 <header>
-
     <div class="logo">
         <a href="index.html">
             <img src="../Projeto Integrador/img/logo.png" class="logo-img">
         </a>
     </div>
-
     <nav>
         <ul class="nav-links">
             <li><a href="../html/index.html">Início</a></li>
             <li><a href="../html/sobre.html">Sobre</a></li>
             <li><a href="../html/materiais.html">Materiais</a></li>
             <li><a href="../html/pontos.html">Pontos de Coleta</a></li>
-            <li><a href="../html/doacaes.html">Doações</a></li>
+            <li><a href="../html/doacoes.html">Doações</a></li>
+            <li><a href="../html/perfil.html">Perfil</a></li>
         </ul>
     </nav>
-
 </header>
-
-<!-- TÍTULO -->
 <section class="titulo-pagina">
     <h1>Pontos de Coleta</h1>
     <p>Encontre locais próximos para descarte sustentável</p>
 </section>
-
-<!-- BUSCA -->
 <section class="busca">
-
     <input type="text"
            id="cidade"
            placeholder="Digite a cidade (ex: Belo Horizonte)">
-
     <select id="tipo">
         <option value="">Todos os materiais</option>
         <option value="computadores">Computadores</option>
@@ -53,48 +43,39 @@
         <option value="mouses">Mouses</option>
         <option value="cabos">Cabos e Carregadores</option>
     </select>
-
     <button onclick="buscarCidade()">
         Buscar
     </button>
-
 </section>
-
-<!-- STATUS -->
 <section style="text-align:center; margin:10px;">
     <p id="status"></p>
 </section>
-
-
 <section class="mapa-container">
     <div id="mapa" style="height: 600px;"></div>
 </section>
-
-
 <footer class="rodape-completo">
-
-    <div class="footer-container">
-
-        <div class="footer-col">
-            <h4>Navegação</h4>
-            <ul>
+        <footer class="rodape-completo">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>Navegação</h4>
+                <ul>
                 <li><a href="../html/index.html">Início</a></li>
                 <li><a href="../html/sobre.html">Sobre</a></li>
                 <li><a href="../html/materiais.html">Materiais</a></li>
                 <li><a href="../html/pontos.html">Pontos de Coleta</a></li>
-                <li><a href="../html/doacaes.html">Doações</a></li>
-            </ul>
+                <li><a href="../html/doacoes.html">Doações</a></li>
+                <li><a href="../html/perfil.html">Perfil</a></li>
+                </ul>
+            </div>
         </div>
-
+    </footer>
         <div class="footer-col" id="contato">
             <h4>Contato Oficial</h4>
             <p>contato@reciclatech.com.br</p>
         </div>
-
         <div class="footer-col">
             <h4>Newsletter</h4>
             <p>Receba dicas de sustentabilidade:</p>
-
             <form class="newsletter-form">
                 <input type="email"
                        placeholder="Seu melhor e-mail">
@@ -104,21 +85,15 @@
                 </button>
             </form>
         </div>
-
     </div>
 
     <div class="footer-bottom">
         <p>© 2026 Recicla Tech - Desenvolvido para o Projeto Integrador</p>
     </div>
-
 </footer>
-
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
 <script>
-
     let mapa = L.map('mapa').setView([-19.9167, -43.9345], 11);
-
     L.tileLayer(
         'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
         {
@@ -306,7 +281,6 @@
                 status.innerHTML =
                     `Nenhum ponto encontrado para "${tipo}".`;
             }
-
         } catch (erro) {
 
             console.error(erro);
@@ -321,9 +295,6 @@
         }
     }
 
-    // =========================
-    // ENTER PARA BUSCAR
-    // =========================
 
     document
         .getElementById("cidade")
@@ -334,9 +305,7 @@
             }
         });
 
-    // =========================
-    // CARREGA AUTOMÁTICO
-    // =========================
+
 
     buscarCidade();
 

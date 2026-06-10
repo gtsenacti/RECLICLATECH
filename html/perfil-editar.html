@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Perfil - Recicla Tech</title>
+
+    <link rel="stylesheet" href="../css/editar.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        <a href="../html/index.html">
+            <img src="../Projeto Integrador/img/logo.png"
+                 class="logo-img"
+                 alt="Logo Recicla Tech">
+        </a>
+    </div>
+
+    <nav>
+        <ul class="nav-links">
+            <li><a href="../html/index.html">Início</a></li>
+            <li><a href="../html/sobre.html">Sobre</a></li>
+            <li><a href="../html/materiais.html">Materiais</a></li>
+            <li><a href="../html/pontos.html">Pontos de Coleta</a></li>
+            <li><a href="../html/doacoes.html">Doações</a></li>
+            <li><a href="../html/perfil.html">Perfil</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<main class="editar-container">
+
+    <div class="editar-card">
+
+        <h1>Editar Perfil</h1>
+
+        <form id="formPerfil">
+
+    <div class="campo">
+        <label>Nome Completo</label>
+        <input type="text" id="nome" required>
+    </div>
+
+    <div class="campo">
+        <label>E-mail</label>
+        <input type="email" id="email" required>
+    </div>
+
+    <div class="campo">
+        <label>Telefone</label>
+        <input type="text" id="telefone">
+    </div>
+
+    <div class="campo">
+        <label>Nova Senha</label>
+        <input type="password" id="senha">
+    </div>
+
+    <div class="botoes-perfil">
+
+        <button type="submit" class="btn-salvar">
+            Salvar Alterações
+        </button>
+
+        <a href="../html/perfil.html" class="btn-voltar">
+            Voltar para Perfil
+        </a>
+
+        <a href="../html/index.html" class="btn-sair">
+            Sair
+        </a>
+
+    </div>
+
+        </form>
+
+    </div>
+
+</main>
+
+<script src="../js/editar.js"></script>
+
+</body>
+</html>

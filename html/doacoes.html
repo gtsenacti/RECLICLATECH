@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+    <title>Doações - Recicla Tech</title>
+    <link rel="stylesheet" href="../css/doacoes.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="../html/index.html">
+                <img src="../Projeto Integrador/img/logo.png"
+                class="logo-img"
+                alt="Logo Recicla Tech">
+            </a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="../html/index.html">Início</a></li>
+                <li><a href="../html/sobre.html">Sobre</a></li>
+                <li><a href="../html/materiais.html">Materiais</a></li>
+                <li><a href="../html/pontos.html">Pontos de Coleta</a></li>
+                <li><a href="../html/doacoes.html">Doações</a></li>
+                <li><a href="../html/perfil.html">Perfil</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero-doacoes">
+        <div class="hero-texto">
+            <h1>Doações Tecnológicas</h1>
+            <p>
+                Doe equipamentos eletrônicos ou encontre
+                itens disponíveis para reutilização.
+                Ajude a diminuir o descarte incorreto
+                do lixo eletrônico.
+            </p>
+            <a href="#formulario-doacao"
+            class="btn-hero">
+                Quero Doar
+            </a>
+        </div>
+    </section>
+    <section class="filtros-doacao">
+        <select id="filtro-material">
+            <option value="todos">Todos os itens</option>
+            <option value="computador">Computadores</option>
+            <option value="celular">Celulares</option>
+            <option value="monitor">Monitores</option>
+            <option value="teclado">Teclados</option>
+        </select>
+        <select id="filtro-cidade">
+            <option value="todas">Todas as regiões</option>
+            <option value="bh">Belo Horizonte</option>
+            <option value="contagem">Contagem</option>
+            <option value="betim">Betim</option>
+            <option value="neves">Ribeirão das Neves</option>
+        </select>
+        <button onclick="filtrarCards()">
+            Filtrar
+        </button>
+    </section>
+    <section class="form-doacao"
+    id="formulario-doacao">
+        <div class="form-container">
+            <h2>Realizar uma Doação ♻️</h2>
+            <p>
+                Preencha as informações abaixo
+                para disponibilizar seu equipamento
+                para doação.
+            </p>
+            <form>
+                <div class="form-grid">
+                    <div class="input-group">
+                        <label>Nome Completo</label>
+                        <input type="text" id="nome" placeholder="Digite seu nome" required>
+                    </div>
+                    <div class="input-group">
+                        <label>E-mail</label>
+                        <input type="email" id="email" placeholder="Digite seu e-mail" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Tipo do Equipamento</label>
+                        <select id="equipamento" required>
+                            <option value="">
+                                Selecione
+                            </option>
+                            <option>
+                                Notebook
+                            </option>
+                            <option>
+                                Celular
+                            </option>
+                            <option>
+                                Monitor
+                            </option>
+                            <option>
+                                Teclado
+                            </option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>Cidade</label>
+                        <input type="text" id="cidade" placeholder="Digite sua cidade" required>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label>Descrição do Equipamento</label>
+                    <textarea id="descricao" placeholder="Descreva o estado do equipamento"></textarea>
+                </div>
+                <div class="input-group">
+                    <label>Imagem do Equipamento</label>
+                    <input type="file" id="imagem">
+                </div>
+                <button type="submit"
+                class="btn-doar">
+                    Publicar Doação
+                </button>
+            </form>
+        </div>
+    </section>
+    <main class="container-section">
+        <h2 class="titulo-sessao">
+            Itens Disponíveis 📦
+
+        </h2>
+        <div class="card-grid">
+            <div class="card-doacao computador bh">
+                <img src="../Projeto Integrador/img/dell.jpeg"
+                alt="Notebook Dell">
+                <div class="card-content">
+                    <h3>Notebook Dell</h3>
+                    <p>
+                        Notebook usado funcionando parcialmente.
+                        Ideal para reaproveitamento de peças.
+                    </p>
+                    <span class="localizacao">
+                        Belo Horizonte
+                    </span>
+                    <button>
+                        Entrar em Contato
+                    </button>
+                </div>
+            </div>
+            <div class="card-doacao celular contagem">
+                <img src="../Projeto Integrador/img/celular.jpeg"
+                alt="Celular Samsung">
+                <div class="card-content">
+                    <h3>Celular Samsung</h3>
+                    <p>
+                        Celular com tela quebrada.
+                        Pode ser reutilizado para manutenção.
+                    </p>
+                    <span class="localizacao">
+                        Contagem
+                    </span>
+                    <button>
+                        Entrar em Contato
+                    </button>
+                </div>
+            </div>
+            <div class="card-doacao monitor betim">
+                <img src="../Projeto Integrador/img/lg.png"
+                alt="Monitor LG">
+                <div class="card-content">
+                    <h3>Monitor LG</h3>
+                    <p>
+                        Monitor LCD em ótimo estado.
+                        Disponível para retirada.
+                    </p>
+                    <span class="localizacao">
+                        Betim
+                    </span>
+                    <button>
+                        Entrar em Contato
+                    </button>
+                </div>
+            </div>
+            <div class="card-doacao teclado neves">
+                <img src="../Projeto Integrador/img/teclado.jpeg"
+                alt="Teclado Gamer">
+                <div class="card-content">
+                    <h3>Teclado Gamer</h3>
+                    <p>
+                        Teclado mecânico funcionando perfeitamente.
+                    </p>
+                    <span class="localizacao">
+                        Ribeirão das Neves
+                    </span>
+                    <button>
+                        Entrar em Contato
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="rodape-completo">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>Navegação</h4>
+                <ul>
+                <li><a href="../html/index.html">Início</a></li>
+                <li><a href="../html/sobre.html">Sobre</a></li>
+                <li><a href="../html/materiais.html">Materiais</a></li>
+                <li><a href="../html/pontos.html">Pontos de Coleta</a></li>
+                <li><a href="../html/doacaes.html">Doações</a></li>
+                <li><a href="../html/perfil.html">Perfil</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contato Oficial</h4>
+                <p>
+                    contato@reciclatech.com.br
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>Newsletter</h4>
+                <p>
+                    Receba dicas de sustentabilidade:
+                </p>
+                <form class="newsletter-form">
+                    <input type="email"
+                    placeholder="Seu melhor e-mail">
+                    <button type="button">
+                        Assinar
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>
+                © 2026 Recicla Tech - Desenvolvido para o Projeto Integrador
+            </p>
+        </div>
+    </footer>
+    <script>
+
+        function filtrarCards(){
+
+            const material =
+            document.getElementById("filtro-material").value;
+
+            const cidade =
+            document.getElementById("filtro-cidade").value;
+
+            const cards =
+            document.querySelectorAll(".card-doacao");
+
+            cards.forEach(card => {
+
+                const materialOk =
+                material === "todos" ||
+                card.classList.contains(material);
+
+                const cidadeOk =
+                cidade === "todas" ||
+                card.classList.contains(cidade);
+
+                if(materialOk && cidadeOk){
+
+                    card.style.display = "block";
+
+                }else{
+
+                    card.style.display = "none";
+
+                }
+
+            });
+        }
+
+    </script>
+
+    <script src="../js/doacoes.js"></script>
+
+</body>
+
+</html>
+

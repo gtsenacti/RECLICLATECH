@@ -1,3 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to bottom, #eef8f1, #d9efe0);
+    color: #333;
+    line-height: 1.6;
+}
 
 header {
     display: flex;
@@ -227,14 +239,15 @@ header {
 
 .rodape-completo{
     background-color: #1a1a1a;
-
     color: #ffffff;
 
-    padding: 45px 0 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
     width: 100%;
 
     margin-top: 50px;
+
+    padding-top: 45px;
 }
 
 .footer-container{

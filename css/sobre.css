@@ -1,3 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7faf8;
+    color: #333;
+    line-height: 1.6;
+}
 
 header {
     display: flex;
@@ -30,9 +42,10 @@ header {
     gap: 20px;
 }
 
-.nav-links li a {
+.nav-links li a{
     text-decoration: none;
     color: #36702b;
+    font-size: 16px;
     font-weight: 600;
 
     padding: 8px 12px;
@@ -62,26 +75,23 @@ section {
     text-align: center;
 }
 
-.texto-sobre {
+.texto-sobre{
     max-width: 900px;
-
     margin: 25px auto 0;
 
-    font-size: 18px;
+    font-size: 17px;
 
     line-height: 1.8;
 
     color: #555;
 }
 
-.titulo-sessao {
-    font-size: 2.2rem;
-
+.titulo-sessao{
+    font-size: 2.6rem;
     font-weight: 700;
-
     color: #1b3a2f;
-
     margin-bottom: 35px;
+    text-align: center;
 }
 
 .card-grid {
@@ -114,19 +124,16 @@ section {
     box-shadow: 0 8px 18px rgba(0,0,0,0.08);
 }
 
-.card h3 {
-    font-size: 1.2rem;
-
-    color: #000;
-
+.card h3{
+    font-size: 20px;
+    font-weight: 600;
+    color: #1b3a2f;
     margin-bottom: 15px;
 }
 
-.card p {
+.card p{
     color: #666;
-
-    line-height: 1.6;
-
+    line-height: 1.7;
     font-size: 15px;
 }
 
@@ -161,31 +168,31 @@ section {
     transform: translateY(-5px);
 }
 
-.info-box h3 {
+.info-box h3{
     color: #2e7d32;
-
     margin-bottom: 12px;
-
-    font-size: 1.1rem;
+    font-size: 20px;
+    font-weight: 600;
 }
 
-.info-box p {
+.info-box p{
     color: #666;
-
-    line-height: 1.6;
+    line-height: 1.7;
+    font-size: 15px;
 }
 
 
 .rodape-completo{
     background-color: #1a1a1a;
-
     color: #ffffff;
 
-    padding: 45px 0 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
     width: 100%;
 
     margin-top: 50px;
+
+    padding-top: 45px;
 }
 
 .footer-container{
@@ -207,7 +214,7 @@ section {
 .footer-col h3,
 .footer-col h4{
     color: #4CAF50;
-
+    font-size: 20px;
     margin-bottom: 20px;
 }
 
@@ -253,7 +260,6 @@ section {
 
 .newsletter-form button{
     background-color: #4CAF50;
-
     color: #fff;
 
     border: none;
@@ -262,7 +268,15 @@ section {
 
     border-radius: 4px;
 
+    font-weight: 600;
+
     cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.newsletter-form button:hover{
+    background-color: #2e7d32;
 }
 
 .footer-bottom{
@@ -390,4 +404,12 @@ section {
     .card-grid{
         grid-template-columns: 1fr;
     }
+}
+
+.info-grid{
+    grid-template-columns: 1fr;
+}
+
+.card-grid{
+    grid-template-columns: 1fr;
 }

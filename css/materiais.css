@@ -115,14 +115,15 @@ section {
 
 .rodape-completo{
     background-color: #1a1a1a;
-
     color: #ffffff;
 
-    padding: 45px 0 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
     width: 100%;
 
     margin-top: 50px;
+
+    padding-top: 45px;
 }
 
 .footer-container{
