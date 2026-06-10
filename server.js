@@ -6,7 +6,7 @@ require("dotenv").config();
 
 //importações dos arquivos modulados
 const db = require("./bancodados/recicla.db");
-const TabelaCadastroRoutes = require("./endpoints/TabelaCadastro");
+const TabelaCadastroRoutes = require("./endpoints/cadastro");
 const loginRoutes = require("./endpoints/login");
 const compatibilidadeRoutes = require("./endpoints/compatibilidade");
 
