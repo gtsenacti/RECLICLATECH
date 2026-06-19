@@ -282,82 +282,81 @@
   /* ==========================================================================
      7. RODAPÉ (FOOTER)
      ========================================================================== */
-  .rodape-completo {
-    background-color: #1a1a1a;
-    color: #ffffff;
-    width: 100%;
-    margin-top: 50px;
-    padding-top: 45px;
-  }
-  
-  .footer-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px 35px;
-    width: 100%;
-  }
-  
-  .footer-col h3,
-  .footer-col h4 {
-    color: #4caf50;
-    margin-bottom: 20px;
-  }
-  
-  .footer-col ul {
-    list-style: none;
-  }
-  
-  .footer-col ul li {
-    margin-bottom: 10px;
-  }
-  
-  .footer-col a {
-    color: #cccccc;
-    text-decoration: none;
-    transition: 0.3s;
-  }
-  
-  .footer-col a:hover {
-    color: #4caf50;
-    padding-left: 5px;
-  }
-  
-  .newsletter-form {
-    display: flex;
-    gap: 10px;
-    margin-top: 10px;
-  }
-  
-  .newsletter-form input {
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    width: 100%;
-  }
-  
-  .newsletter-form button {
-    background-color: #4caf50;
-    color: #ffffff;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  
-  .footer-bottom {
-    background-color: #527061;
-    color: #ffffff;
-    text-align: center;
-    font-size: 14px;
-    margin-top: 25px;
-    padding: 16px 20px;
-    border-top: 1px solid #738d76;
-  }
-  
+     .rodape-completo {
+        background-color: #1a1a1a;
+        color: #ffffff;
+        width: 100%;
+        margin-top: 50px;
+        padding-top: 45px;
+      }
+      
+      .footer-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px 35px;
+      }
+      
+      .footer-col h4 {
+        color: #4caf50;
+        margin-bottom: 20px;
+      }
+      
+      .footer-col ul {
+        list-style: none;
+      }
+      
+      .footer-col ul li {
+        margin-bottom: 10px;
+      }
+      
+      .footer-col a {
+        color: #cccccc;
+        text-decoration: none;
+        transition: 0.3s;
+      }
+      
+      .footer-col a:hover {
+        color: #4caf50;
+        padding-left: 5px;
+      }
+      
+      .newsletter-form {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      
+      .newsletter-form input {
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        width: 100%;
+      }
+      
+      .newsletter-form button {
+        background-color: #4caf50;
+        color: #ffffff;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      
+      .footer-bottom {
+        background-color: #527061;
+        color: #ffffff;
+        text-align: center;
+        font-size: 14px;
+        margin-top: 25px;
+        padding: 16px 20px;
+        border-top: 1px solid #738d76;
+      }
+      
+      
   /* ==========================================================================
      8. RESPONSIVIDADE (MEDIA QUERIES)
      ========================================================================== */

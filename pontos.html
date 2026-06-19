@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recicla Tech</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="./css/pontos.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="../index.html">
+                <img src="./Projeto Integrador/img/logo.png" class="logo-img" alt="Logo Recicla Tech">
+            </a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="materiais.html">Materiais</a></li>
+                <li><a href="pontos.html">Pontos de Coleta</a></li>
+                <li><a href="doacoes.html">Doações</a></li>
+                <li><a href="perfil.html">Perfil</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="titulo-pagina">
+        <h1>Pontos de Coleta</h1>
+        <p>Encontre locais próximos para descarte sustentável</p>
+    </section>
+    <section class="busca">
+        <input type="text" id="cidade" placeholder="Digite a cidade (ex: Belo Horizonte)">
+        <select id="tipo">
+            <option value="">Todos os materiais</option>
+            <option value="computadores">Computadores</option>
+            <option value="celulares">Celulares</option>
+            <option value="monitores">Monitores</option>
+            <option value="teclados">Teclados</option>
+            <option value="mouses">Mouses</option>
+            <option value="cabos">Cabos e Carregadores</option>
+        </select>
+        <button onclick="buscarCidade()">
+            Buscar
+        </button>
+    </section>
+    <section style="text-align:center; margin:10px;">
+        <p id="status"></p>
+    </section>
+    <section class="mapa-container">
+        <div id="mapa" style="height: 600px;"></div>
+    </section>
+    <footer class="rodape-completo">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="materiais.html">Materiais</a></li>
+                    <li><a href="pontos.html">Pontos de Coleta</a></li>
+                    <li><a href="doacoes.html">Doações</a></li>
+                    <li><a href="perfil.html">Perfil</a></li>
+                    <li><a href="cadastro.html">Cadastro</a></li>
+                </ul>
+            </div>
+            <div class="footer-col" id="contato">
+                <h4>Contato Oficial</h4>
+                <p>contato@reciclatech.com.br</p>
+            </div>
+            <div class="footer-col">
+                <h4>Newsletter</h4>
+                <p>Receba dicas de sustentabilidade:</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Seu melhor e-mail">
+                    <button type="button">Assinar</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Recicla Tech - Desenvolvido para o Projeto Integrador</p>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="./js/pontos.js"></script>
+
+</body>
+
+</html>
