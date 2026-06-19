@@ -1,578 +1,362 @@
-
-*{
+/* ==========================================================================
+   1. CONFIGURAÇÕES GERAIS E RESET
+   ========================================================================== */
+   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-body{
-    font-family: Arial, Helvetica, sans-serif;
-
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
     background: linear-gradient(to bottom, #eef8f1, #d9efe0);
-
     min-height: 100vh;
-
-    color: #333;
-}
-
-/* =========================
-   HEADER
-========================= */
-
-header{
+    color: #333333;
+    line-height: 1.6;
+  }
+  
+  /* ==========================================================================
+     2. CABEÇALHO E NAVEGAÇÃO
+     ========================================================================== */
+  header {
     display: flex;
-
     justify-content: center;
     align-items: center;
-
     gap: 50px;
-
     padding: 20px 5%;
-
     background-color: #c4e5da;
-
     position: sticky;
-
     top: 0;
-
     z-index: 1000;
-}
-
-.logo-img{
+  }
+  
+  .logo-img {
     height: 120px;
-}
-
-.nav-links{
+  }
+  
+  .nav-links {
     display: flex;
-
     list-style: none;
-
     gap: 25px;
-}
-
-.nav-links a{
+  }
+  
+  .nav-links a {
     text-decoration: none;
-
     color: #36702b;
-
     font-weight: 600;
-
     transition: 0.3s;
-}
-
-.nav-links a:hover{
-    color: #4CAF50;
-}
-
-/* =========================
-   PERFIL
-========================= */
-
-.perfil-container{
+  }
+  
+  .nav-links a:hover {
+    color: #4caf50;
+  }
+  
+  /* ==========================================================================
+     3. SEÇÃO DO PERFIL DO USUÁRIO
+     ========================================================================== */
+  .perfil-container {
     display: flex;
-
     justify-content: center;
     align-items: center;
-
     padding: 60px 20px;
-}
-
-.perfil-card{
+  }
+  
+  .perfil-card {
     width: 100%;
     max-width: 600px;
-
-    background-color: white;
-
+    background-color: #ffffff;
     border-radius: 20px;
-
     padding: 40px;
-
-    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
     transition: 0.3s;
-}
-
-.perfil-card:hover{
+  }
+  
+  .perfil-card:hover {
     transform: translateY(-5px);
-}
-
-/* =========================
-   TOPO PERFIL
-========================= */
-
-.perfil-topo{
+  }
+  
+  .perfil-topo {
     text-align: center;
-
     margin-bottom: 35px;
-}
-
-.foto-perfil{
+  }
+  
+  .foto-perfil {
     width: 130px;
-
     height: 130px;
-
     border-radius: 50%;
-
     object-fit: cover;
-
-    border: 5px solid #4CAF50;
-
+    border: 5px solid #4caf50;
     margin-bottom: 20px;
-}
-
-.perfil-topo h1{
+  }
+  
+  .perfil-topo h1 {
     color: #1a3c1a;
-
     font-size: 2.2rem;
-
     margin-bottom: 10px;
-}
-
-.subtitulo{
-    color: #666;
-
+  }
+  
+  .subtitulo {
+    color: #666666;
     line-height: 1.6;
-}
-
-/* =========================
-   INFORMAÇÕES
-========================= */
-
-.perfil-info{
+  }
+  
+  .perfil-info {
     display: flex;
-
     flex-direction: column;
-
     gap: 20px;
-}
-
-.info-item{
+  }
+  
+  .info-item {
     background-color: #f7f7f7;
-
     padding: 20px;
-
     border-radius: 12px;
-
-    border-left: 5px solid #4CAF50;
-}
-
-.info-item h3{
+    border-left: 5px solid #4caf50;
+  }
+  
+  .info-item h3 {
     color: #2e7d32;
-
     margin-bottom: 8px;
-
     font-size: 18px;
-}
-
-.info-item p{
-    color: #555;
-
+  }
+  
+  .info-item p {
+    color: #555555;
     font-size: 15px;
-}
-
-/* =========================
-   BOTÕES
-========================= */
-
-.perfil-botoes{
+  }
+  
+  /* Componentes de Botões do Perfil */
+  .perfil-botoes {
     display: flex;
-
     justify-content: center;
-
     gap: 20px;
-
     margin-top: 35px;
-
     flex-wrap: wrap;
-}
-
-.btn-perfil,
-.btn-sair{
+  }
+  
+  .btn-perfil,
+  .btn-sair {
     text-decoration: none;
-
     padding: 14px 25px;
-
     border-radius: 10px;
-
-    color: white;
-
+    color: #ffffff;
     font-weight: bold;
-
     transition: 0.3s;
-}
-
-.btn-perfil{
+  }
+  
+  .btn-perfil {
     background-color: #2e7d32;
-}
-
-.btn-perfil:hover{
+  }
+  
+  .btn-perfil:hover {
     background-color: #1b5e20;
-}
-
-.btn-sair{
+  }
+  
+  .btn-sair {
     background-color: #d9534f;
-}
-
-.btn-sair:hover{
+  }
+  
+  .btn-sair:hover {
     background-color: #b52b27;
-}
-
-/* =========================
-   FOOTER
-========================= */
-
-.rodape-completo{
+  }
+  
+  /* ==========================================================================
+     4. SEÇÃO HISTÓRICO DE ATIVIDADES
+     ========================================================================== */
+  .historico-section {
+    margin-top: 45px;
+  }
+  
+  .historico-section h2 {
+    color: #1b3a2f;
+    margin-bottom: 25px;
+    font-size: 2rem;
+  }
+  
+  .historico-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+  
+  .historico-card {
+    background-color: #f9f9f9;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid #ececec;
+    transition: 0.3s;
+  }
+  
+  .historico-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  }
+  
+  .historico-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    background-color: #ffffff;
+    padding: 10px;
+  }
+  
+  .historico-content {
+    padding: 20px;
+  }
+  
+  .historico-content h3 {
+    color: #1b3a2f;
+    margin-bottom: 12px;
+  }
+  
+  .historico-content p {
+    color: #666666;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    font-size: 14px;
+  }
+  
+  /* Status Cards labels */
+  .status-doacao,
+  .status-recebido {
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+  }
+  
+  .status-doacao {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+  }
+  
+  .status-recebido {
+    background-color: #e3f2fd;
+    color: #1565c0;
+  }
+  
+  /* ==========================================================================
+     5. RODAPÉ (FOOTER)
+     ========================================================================== */
+  .rodape-completo {
     background-color: #1a1a1a;
     color: #ffffff;
-
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
     width: 100%;
-
     margin-top: 50px;
-
     padding-top: 45px;
-}
-
-.footer-container{
+  }
+  
+  .footer-container {
     display: grid;
-
     grid-template-columns: repeat(3, 1fr);
-
     gap: 40px;
-
     max-width: 1200px;
-
     margin: 0 auto;
-
     padding: 0 20px 35px;
-}
-
-.footer-col h4{
-    color: #4CAF50;
-
+  }
+  
+  .footer-col h4 {
+    color: #4caf50;
     margin-bottom: 20px;
-}
-
-.footer-col ul{
+  }
+  
+  .footer-col ul {
     list-style: none;
-}
-
-.footer-col ul li{
+  }
+  
+  .footer-col ul li {
     margin-bottom: 10px;
-}
-
-.footer-col a{
-    color: #ccc;
-
+  }
+  
+  .footer-col a {
+    color: #cccccc;
     text-decoration: none;
-
     transition: 0.3s;
-}
-
-.footer-col a:hover{
-    color: #4CAF50;
-
+  }
+  
+  .footer-col a:hover {
+    color: #4caf50;
     padding-left: 5px;
-}
-
-.newsletter-form{
+  }
+  
+  .newsletter-form {
     display: flex;
-
     gap: 10px;
-
     margin-top: 10px;
-}
-
-.newsletter-form input{
+  }
+  
+  .newsletter-form input {
     padding: 10px;
-
     border: none;
-
     border-radius: 4px;
-
     width: 100%;
-}
-
-.newsletter-form button{
-    background-color: #4CAF50;
-
-    color: white;
-
-    border: none;
-
-    padding: 10px 15px;
-
-    border-radius: 4px;
-
-    cursor: pointer;
-}
-
-.footer-bottom{
-    background-color: #527061;
-
+  }
+  
+  .newsletter-form button {
+    background-color: #4caf50;
     color: #ffffff;
-
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .footer-bottom {
+    background-color: #527061;
+    color: #ffffff;
     text-align: center;
-
     font-size: 14px;
-
     margin-top: 25px;
-
     padding: 16px 20px;
-
     border-top: 1px solid #738d76;
-}
-
-@media (max-width: 768px){
-
-    header{
-        flex-direction: column;
-
-        gap: 20px;
+  }
+  
+  /* ==========================================================================
+     6. RESPONSIVIDADE (MEDIA QUERIES)
+     ========================================================================== */
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      gap: 20px;
     }
-
-    .nav-links{
-        flex-direction: column;
-
-        align-items: center;
+  
+    .nav-links {
+      flex-direction: column;
+      align-items: center;
     }
-
-    .perfil-card{
-        padding: 30px 20px;
+  
+    .perfil-card {
+      padding: 30px 20px;
     }
-
-    .perfil-botoes{
-        flex-direction: column;
+  
+    .perfil-botoes {
+      flex-direction: column;
     }
-
+  
     .btn-perfil,
-    .btn-sair{
-        width: 100%;
-
-        text-align: center;
+    .btn-sair {
+      width: 100%;
+      text-align: center;
     }
-
-    .footer-container{
-        grid-template-columns: 1fr;
-
-        text-align: center;
+  
+    .historico-grid {
+      grid-template-columns: 1fr;
     }
-
-    .newsletter-form{
-        flex-direction: column;
+  
+    .footer-container {
+      grid-template-columns: 1fr;
+      text-align: center;
     }
-
+  
+    .newsletter-form {
+      flex-direction: column;
+    }
+  
     .newsletter-form input,
-    .newsletter-form button{
-        width: 100%;
+    .newsletter-form button {
+      width: 100%;
     }
-}
-
-.historico-section{
-    margin-top: 45px;
-}
-
-.historico-section h2{
-    color: #1b3a2f;
-
-    margin-bottom: 25px;
-
-    font-size: 2rem;
-}
-
-.historico-grid{
-    display: grid;
-
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 25px;
-}
-
-.historico-card{
-    background-color: #f9f9f9;
-
-    border-radius: 18px;
-
-    overflow: hidden;
-
-    border: 1px solid #ececec;
-
-    transition: 0.3s;
-}
-
-.historico-card:hover{
-    transform: translateY(-5px);
-
-    box-shadow: 0 8px 18px rgba(0,0,0,0.08);
-}
-
-.historico-card img{
-    width: 100%;
-
-    height: 180px;
-
-    object-fit: contain;
-
-    background-color: white;
-
-    padding: 10px;
-}
-
-.historico-content{
-    padding: 20px;
-}
-
-.historico-content h3{
-    color: #1b3a2f;
-
-    margin-bottom: 12px;
-}
-
-.historico-content p{
-    color: #666;
-
-    line-height: 1.7;
-
-    margin-bottom: 15px;
-
-    font-size: 14px;
-}
-
-.status-doacao,
-.status-recebido{
-    display: inline-block;
-
-    padding: 8px 14px;
-
-    border-radius: 20px;
-
-    font-size: 13px;
-
-    font-weight: bold;
-}
-
-.status-doacao{
-    background-color: #e8f5e9;
-
-    color: #2e7d32;
-}
-
-.status-recebido{
-    background-color: #e3f2fd;
-
-    color: #1565c0;
-}
-
-/* RESPONSIVO */
-
-@media (max-width: 768px){
-
-    .historico-grid{
-        grid-template-columns: 1fr;
-    }
-}
-
-.historico-section{
-    margin-top: 45px;
-}
-
-.historico-section h2{
-    color: #1b3a2f;
-
-    margin-bottom: 25px;
-
-    font-size: 2rem;
-}
-
-.historico-grid{
-    display: grid;
-
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 25px;
-}
-
-.historico-card{
-    background-color: #f9f9f9;
-
-    border-radius: 18px;
-
-    overflow: hidden;
-
-    border: 1px solid #ececec;
-
-    transition: 0.3s;
-}
-
-.historico-card:hover{
-    transform: translateY(-5px);
-
-    box-shadow: 0 8px 18px rgba(0,0,0,0.08);
-}
-
-.historico-card img{
-    width: 100%;
-
-    height: 180px;
-
-    object-fit: contain;
-
-    background-color: white;
-
-    padding: 10px;
-}
-
-.historico-content{
-    padding: 20px;
-}
-
-.historico-content h3{
-    color: #1b3a2f;
-
-    margin-bottom: 12px;
-}
-
-.historico-content p{
-    color: #666;
-
-    line-height: 1.7;
-
-    margin-bottom: 15px;
-
-    font-size: 14px;
-}
-
-.status-doacao,
-.status-recebido{
-    display: inline-block;
-
-    padding: 8px 14px;
-
-    border-radius: 20px;
-
-    font-size: 13px;
-
-    font-weight: bold;
-}
-
-.status-doacao{
-    background-color: #e8f5e9;
-
-    color: #2e7d32;
-}
-
-.status-recebido{
-    background-color: #e3f2fd;
-
-    color: #1565c0;
-}
-
-/* RESPONSIVO */
-
-@media (max-width: 768px){
-
-    .historico-grid{
-        grid-template-columns: 1fr;
-    }
-}
+  }
+  
 

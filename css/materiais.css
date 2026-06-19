@@ -1,331 +1,278 @@
-
-header {
+/* ==========================================================================
+   1. CABEÇALHO E NAVEGAÇÃO
+   ========================================================================== */
+   header {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 50px;
-
     padding: 20px 5%;
-
     background-color: #c4e5da;
-
     position: sticky;
     top: 0;
     z-index: 1000;
-}
-
-.logo {
+  }
+  
+  .logo {
     display: flex;
     align-items: center;
-}
-
-.logo-img {
+  }
+  
+  .logo-img {
     height: 120px;
     width: auto;
-}
-
-.nav-links {
+  }
+  
+  .nav-links {
     display: flex;
     list-style: none;
     gap: 20px;
-}
-
-.nav-links li a {
+  }
+  
+  .nav-links li a {
     text-decoration: none;
     color: #36702b;
     font-weight: 600;
-
     padding: 8px 12px;
-
     border-radius: 6px;
-
     transition: 0.3s;
-}
-
-.nav-links li a:hover {
+  }
+  
+  .nav-links li a:hover {
     background-color: #66bb6a;
-    color: white;
-}
-
-
-.container-section {
+    color: #ffffff;
+  }
+  
+  /* ==========================================================================
+     2. ESTRUTURA DE LAYOUT E SEÇÕES
+     ========================================================================== */
+  .container-section {
     max-width: 1200px;
     margin: 70px auto;
     padding: 0 20px;
-}
-
-
-section {
+  }
+  
+  section {
     margin-bottom: 70px;
-}
-
-.titulo-sessao {
+  }
+  
+  .titulo-pagina {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #ffffff;
+  }
+  
+  .titulo-sessao {
     font-size: 2rem;
     font-weight: 700;
-    color: #000;
+    color: #000000;
     margin-bottom: 35px;
-}
-
-
-.card-grid {
+  }
+  
+  /* ==========================================================================
+     3. SISTEMA DE FERRAMENTAS E BUSCA
+     ========================================================================== */
+  .busca {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 30px 20px;
+    flex-wrap: wrap;
+  }
+  
+  .busca input,
+  .busca select {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #cccccc;
+  }
+  
+  .busca button {
+    background-color: #4caf50;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .mapa-container {
+    padding: 20px;
+  }
+  
+  #mapa {
+    height: 500px;
+    border-radius: 10px;
+    border: 1px solid #dddddd;
+  }
+  
+  /* ==========================================================================
+     4. LAYOUT DE GRIDS E CARDS
+     ========================================================================== */
+  .card-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-}
-
-.card {
+  }
+  
+  .card {
     background: #ffffff;
-
     border-radius: 14px;
-
     padding: 28px 20px;
-
     text-align: center;
-
     border: 1px solid #eeeeee;
-
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     transition: 0.3s;
-}
-
-.card:hover {
+  }
+  
+  .card:hover {
     transform: translateY(-5px);
-
-    box-shadow: 0 8px 18px rgba(0,0,0,0.08);
-}
-
-
-.card h3 {
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  }
+  
+  .card h3 {
     font-size: 1.1rem;
-    color: #000;
+    color: #000000;
     margin-bottom: 12px;
-}
-
-
-.card p {
-    color: #666;
+  }
+  
+  .card p {
+    color: #666666;
     font-size: 15px;
     line-height: 1.5;
-}
-
-.nao-aceitos .card {
+  }
+  
+  .nao-aceitos .card {
     border-left: 4px solid #ff9800;
-}
-
-.rodape-completo{
+  }
+  
+  /* ==========================================================================
+     5. RODAPÉ (FOOTER)
+     ========================================================================== */
+  .rodape-completo {
     background-color: #1a1a1a;
     color: #ffffff;
-
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
     width: 100%;
-
     margin-top: 50px;
-
     padding-top: 45px;
-}
-
-.footer-container{
+  }
+  
+  .footer-container {
     display: grid;
-
     grid-template-columns: repeat(3, 1fr);
-
     gap: 40px;
-
     max-width: 1200px;
-
     margin: 0 auto;
-
     padding: 0 20px 35px;
-
     width: 100%;
-}
-
-.footer-col h3,
-.footer-col h4{
-    color: #4CAF50;
-
+  }
+  
+  .footer-col h3,
+  .footer-col h4 {
+    color: #4caf50;
     margin-bottom: 20px;
-}
-
-.footer-col ul{
+  }
+  
+  .footer-col ul {
     list-style: none;
-}
-
-.footer-col ul li{
+  }
+  
+  .footer-col ul li {
     margin-bottom: 10px;
-}
-
-.footer-col a{
-    color: #ccc;
-
+  }
+  
+  .footer-col a {
+    color: #cccccc;
     text-decoration: none;
-
     transition: 0.3s;
-}
-
-.footer-col a:hover{
-    color: #4CAF50;
-
+  }
+  
+  .footer-col a:hover {
+    color: #4caf50;
     padding-left: 5px;
-}
-
-.newsletter-form{
+  }
+  
+  .newsletter-form {
     display: flex;
-
     gap: 10px;
-
     margin-top: 10px;
-}
-
-.newsletter-form input{
+  }
+  
+  .newsletter-form input {
     padding: 10px;
-
     border: none;
-
     border-radius: 4px;
-
     width: 100%;
-}
-
-.newsletter-form button{
-    background-color: #4CAF50;
-
-    color: #fff;
-
-    border: none;
-
-    padding: 10px 15px;
-
-    border-radius: 4px;
-
-    cursor: pointer;
-}
-
-.footer-bottom{
-    background-color: #527061;
-
+  }
+  
+  .newsletter-form button {
+    background-color: #4caf50;
     color: #ffffff;
-
-    text-align: center;
-
-    font-size: 14px;
-
-    margin-top: 25px;
-
-    padding: 16px 20px;
-
-    border-top: 1px solid #738d76;
-}
-
-.titulo-pagina{
-    text-align: center;
-
-    padding: 40px 20px;
-
-    background-color: #ffffff;
-}
-
-.busca{
-    display: flex;
-
-    justify-content: center;
-
-    gap: 10px;
-
-    padding: 30px 20px;
-
-    flex-wrap: wrap;
-}
-
-.busca input,
-.busca select{
-    padding: 10px;
-
-    border-radius: 6px;
-
-    border: 1px solid #ccc;
-}
-
-.busca button{
-    background-color: #4CAF50;
-
-    color: white;
-
     border: none;
-
-    padding: 10px 20px;
-
-    border-radius: 6px;
-
+    padding: 10px 15px;
+    border-radius: 4px;
     cursor: pointer;
-}
-
-.mapa-container{
-    padding: 20px;
-}
-
-#mapa{
-    height: 500px;
-
-    border-radius: 10px;
-
-    border: 1px solid #ddd;
-}
-
-@media (max-width: 768px){
-
-    header{
-        flex-direction: column;
-
-        gap: 15px;
+    transition: 0.3s;
+  }
+  
+  .footer-bottom {
+    background-color: #527061;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 25px;
+    padding: 16px 20px;
+    border-top: 1px solid #738d76;
+  }
+  
+  /* ==========================================================================
+     6. RESPONSIVIDADE (MEDIA QUERIES)
+     ========================================================================== */
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      gap: 15px;
     }
-
-    .nav-links{
-        flex-direction: column;
-
-        align-items: center;
+  
+    .nav-links {
+      flex-direction: column;
+      align-items: center;
     }
-
-    .footer-container{
-        grid-template-columns: 1fr;
-
-        text-align: center;
+  
+    .footer-container {
+      grid-template-columns: 1fr;
+      text-align: center;
     }
-
-    .newsletter-form{
-        flex-direction: column;
-
-        align-items: center;
+  
+    .newsletter-form {
+      flex-direction: column;
+      align-items: center;
     }
-
+  
     .newsletter-form input,
-    .newsletter-form button{
-        max-width: 300px;
-
-        width: 100%;
+    .newsletter-form button {
+      max-width: 300px;
+      width: 100%;
     }
-
-    #mapa{
-        height: 400px;
+  
+    #mapa {
+      height: 400px;
     }
-
-    .busca{
-        flex-direction: column;
-
-        align-items: center;
+  
+    .busca {
+      flex-direction: column;
+      align-items: center;
     }
-
+  
     .busca input,
     .busca select,
-    .busca button{
-        width: 100%;
-
-        max-width: 300px;
+    .busca button {
+      width: 100%;
+      max-width: 300px;
     }
-
-    .card-grid{
-        grid-template-columns: 1fr;
+  
+    .card-grid {
+      grid-template-columns: 1fr;
     }
-}
+  }
