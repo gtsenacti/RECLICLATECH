@@ -6,9 +6,7 @@ form.addEventListener("submit", async (e) => {
 
     const nome = document.getElementById("nome").value;
     const email = document.getElementById("email").value;
-    const telefone = document.getElementById("telefone").value;
     const senha = document.getElementById("senha").value;
-    const confirmarSenha = document.getElementById("confirmarSenha").value;
 
     if (senha !== confirmarSenha) {
 
@@ -29,7 +27,6 @@ form.addEventListener("submit", async (e) => {
                 body: JSON.stringify({
                     nome,
                     email,
-                    telefone,
                     senha
                 })
             }
@@ -39,7 +36,7 @@ form.addEventListener("submit", async (e) => {
 
         alert(dados.mensagem);
 
-        window.location.href = "../html/login.html";
+        window.location.href = "index.html";
 
     } catch (erro) {
 

@@ -2,13 +2,9 @@
 const express = require("express");
 const cors = require("cors");
 
-require("dotenv").config();
-
 //importações dos arquivos modulados
-const db = require("./bancodados/recicla.db");
+const db = require("./conexao/conectar");
 const TabelaCadastroRoutes = require("./endpoints/cadastro");
-const loginRoutes = require("./endpoints/login");
-const compatibilidadeRoutes = require("./endpoints/compatibilidade");
 
 //inicialização do servidor
 const app = express();
@@ -19,12 +15,6 @@ app.use(express.json());
 
 //rota de cadastro
 TabelaCadastroRoutes(app, db);
-
-//rota de login
-loginRoutes(app, db);
-
-//rota compatibilidade
-compatibilidadeRoutes(app);
 
 //inicialização do servidor
 app.listen(3000, () => {
